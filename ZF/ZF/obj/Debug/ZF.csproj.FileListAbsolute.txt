@@ -1,0 +1,5 @@
+E:\zhengwc\Github\ZF\ZF\ZF\obj\Debug\ZF.csprojResolveAssemblyReference.cache
+E:\zhengwc\Github\ZF\ZF\ZF\bin\Debug\ZF.dll
+E:\zhengwc\Github\ZF\ZF\ZF\bin\Debug\ZF.pdb
+E:\zhengwc\Github\ZF\ZF\ZF\obj\Debug\ZF.dll
+E:\zhengwc\Github\ZF\ZF\ZF\obj\Debug\ZF.pdb

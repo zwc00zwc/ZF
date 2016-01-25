@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>Lib\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="ServiceStack.Common">
       <HintPath>Lib\ServiceStack.Common.dll</HintPath>
     </Reference>
@@ -56,6 +59,7 @@
     <Compile Include="Db\LibConvert.cs" />
     <Compile Include="Db\SqlHelper\SqlServerHelper.cs" />
     <Compile Include="IOHelper\IOHelper.cs" />
+    <Compile Include="Log\LogHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Redis\RedisManager.cs" />
   </ItemGroup>

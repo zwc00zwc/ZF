@@ -12,17 +12,34 @@ namespace ZF.Db.SqlHelper
     {
         public static DataTable Get(string conn, string sql, params SqlParameter[] paramter)
         {
-            SqlConnection dbconn = new SqlConnection(conn);
-            dbconn.Open();
-            using (SqlCommand cmd = dbconn.CreateCommand())
+            using (SqlConnection dbconn = new SqlConnection(conn))
             {
-                cmd.CommandText = sql;
-                cmd.Parameters.AddRange(paramter);
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-                dbconn.Close();
-                return dt;
+                dbconn.Open();
+                using (SqlCommand cmd = dbconn.CreateCommand())
+                {
+                    cmd.CommandText = sql;
+                    cmd.Parameters.AddRange(paramter);
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+                    dbconn.Close();
+                    return dt;
+                }
+            }
+        }
+
+        public static void ExecuteNonQuery(string conn, string sql, params SqlParameter[] paramter)
+        {
+            using (SqlConnection dbconn = new SqlConnection(conn))
+            {
+                dbconn.Open();
+                using (SqlCommand cmd = dbconn.CreateCommand())
+                {
+                    cmd.CommandText = sql;
+                    cmd.Parameters.AddRange(paramter);
+                    cmd.ExecuteNonQuery();
+                    dbconn.Close();
+                }
             }
         }
     }

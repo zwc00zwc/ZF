@@ -53,5 +53,38 @@ namespace ZF.IOHelper
                 return str;
             }
         }
+
+        /// <summary>
+        /// 文件拷贝  不支持文件目录有子目录
+        /// </summary>
+        /// <param name="srcDir"></param>
+        /// <param name="tgtDir"></param>
+        public static void CopyDirectory(string srcDir, string tgtDir)
+        {
+            DirectoryInfo source = new DirectoryInfo(srcDir);
+            DirectoryInfo target = new DirectoryInfo(tgtDir);
+
+            if (target.FullName.StartsWith(source.FullName, StringComparison.CurrentCultureIgnoreCase))
+            {
+                throw new Exception("父目录不能拷贝到子目录！");
+            }
+
+            if (!source.Exists)
+            {
+                return;
+            }
+
+            if (!target.Exists)
+            {
+                target.Create();
+            }
+
+            FileInfo[] files = source.GetFiles();
+
+            for (int i = 0; i < files.Length; i++)
+            {
+                File.Copy(files[i].FullName, target.FullName + @"\" + files[i].Name, true);
+            }
+        }
     }
 }

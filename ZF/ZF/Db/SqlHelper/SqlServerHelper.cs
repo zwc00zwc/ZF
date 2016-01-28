@@ -28,8 +28,9 @@ namespace ZF.Db.SqlHelper
             }
         }
 
-        public static void ExecuteNonQuery(string conn, string sql, params SqlParameter[] paramter)
+        public static int ExecuteNonQuery(string conn, string sql, params SqlParameter[] paramter)
         {
+            int executecount = 0;
             using (SqlConnection dbconn = new SqlConnection(conn))
             {
                 dbconn.Open();
@@ -37,10 +38,11 @@ namespace ZF.Db.SqlHelper
                 {
                     cmd.CommandText = sql;
                     cmd.Parameters.AddRange(paramter);
-                    cmd.ExecuteNonQuery();
+                    executecount = cmd.ExecuteNonQuery();
                     dbconn.Close();
                 }
             }
+            return executecount;
         }
     }
 }

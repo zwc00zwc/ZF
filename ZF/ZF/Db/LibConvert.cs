@@ -233,6 +233,16 @@ namespace ZF.Db
             }
         }
 
+        public static DateTime? ObjToDateTimeOrNull(object aObj)
+        {
+            DateTime? dRet = null;
+            if (aObj != null)
+            {
+                dRet = Convert.ToDateTime(aObj);
+            }
+            return dRet;
+        }
+
         /// <summary>【通用函数】object类型转换为bool类型，直接强制转换(bool)aObj
         /// </summary>
         public static bool ObjToBool(object aObj)

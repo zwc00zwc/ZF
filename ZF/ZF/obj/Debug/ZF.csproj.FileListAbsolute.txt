@@ -7,3 +7,9 @@ E:\zhengwc\Github\ZF\ZF\ZF\bin\Debug\ServiceStack.Interfaces.dll
 E:\zhengwc\Github\ZF\ZF\ZF\bin\Debug\ServiceStack.Redis.dll
 E:\zhengwc\Github\ZF\ZF\ZF\bin\Debug\ServiceStack.Text.dll
 E:\zhengwc\Github\ZF\ZF\ZF\bin\Debug\log4net.dll
+E:\zhengwc\Github\ZF\ZF\ZF\bin\Debug\RabbitMQ.Client.dll
+E:\zhengwc\Github\ZF\ZF\ZF\bin\Debug\RabbitMQ.ServiceModel.dll
+E:\zhengwc\Github\ZF\ZF\ZF\bin\Debug\RabbitMQ.Client.xml
+E:\zhengwc\Github\ZF\ZF\ZF\obj\Debug\ZF.csprojResolveAssemblyReference.cache
+E:\zhengwc\Github\ZF\ZF\ZF\bin\Debug\Newtonsoft.Json.dll
+E:\zhengwc\Github\ZF\ZF\ZF\bin\Debug\Newtonsoft.Json.xml

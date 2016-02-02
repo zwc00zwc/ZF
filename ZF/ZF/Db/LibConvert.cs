@@ -236,7 +236,7 @@ namespace ZF.Db
         public static DateTime? ObjToDateTimeOrNull(object aObj)
         {
             DateTime? dRet = null;
-            if (aObj != null)
+            if (aObj != null && !(aObj is DBNull))
             {
                 dRet = Convert.ToDateTime(aObj);
             }

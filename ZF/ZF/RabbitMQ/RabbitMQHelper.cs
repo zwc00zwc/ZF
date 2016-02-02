@@ -38,7 +38,7 @@ namespace ZF.RabbitMQ
             }
         }
 
-        public static void Send(RabbitMQModel model, Action<string> action)
+        public static void Send(RabbitMQModel model, Action<string> action, string obj)
         {
             ConnectionFactory factory = new ConnectionFactory();
             factory.HostName = model.HostName;
@@ -52,8 +52,8 @@ namespace ZF.RabbitMQ
                     channel.QueueDeclare(model.QueueName, false, false, false, null);
                     while (true)
                     {
-                        string customStr = Console.ReadLine();
-                        byte[] bytes = Encoding.UTF8.GetBytes(customStr);
+
+                        byte[] bytes = Encoding.UTF8.GetBytes(obj);
 
                         //设置消息持久化
                         IBasicProperties properties = channel.CreateBasicProperties();
@@ -61,7 +61,7 @@ namespace ZF.RabbitMQ
                         channel.BasicPublish("", model.QueueName, properties, bytes);
 
                         //channel.BasicPublish("", "MyFirstQueue", null, bytes);
-                        action.Invoke("消息已发送：" + customStr);
+                        action.Invoke("消息已发送：" + obj);
                     }
                 }
             }

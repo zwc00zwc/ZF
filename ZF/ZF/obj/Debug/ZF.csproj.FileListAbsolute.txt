@@ -13,3 +13,4 @@ E:\zhengwc\Github\ZF\ZF\ZF\bin\Debug\RabbitMQ.Client.xml
 E:\zhengwc\Github\ZF\ZF\ZF\obj\Debug\ZF.csprojResolveAssemblyReference.cache
 E:\zhengwc\Github\ZF\ZF\ZF\bin\Debug\Newtonsoft.Json.dll
 E:\zhengwc\Github\ZF\ZF\ZF\bin\Debug\Newtonsoft.Json.xml
+E:\zhengwc\Github\ZF\ZF\ZF\bin\Debug\SharpCompress.dll

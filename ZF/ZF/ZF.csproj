@@ -55,6 +55,9 @@
     <Reference Include="ServiceStack.Text">
       <HintPath>Lib\ServiceStack.Text.dll</HintPath>
     </Reference>
+    <Reference Include="SharpCompress">
+      <HintPath>Lib\SharpCompress.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -69,6 +72,7 @@
     <Compile Include="Db\LibConvert.cs" />
     <Compile Include="Db\LibJsonConvert.cs" />
     <Compile Include="Db\SqlHelper\SqlServerHelper.cs" />
+    <Compile Include="DeCompression\DeCompressionHelper.cs" />
     <Compile Include="IOHelper\IOHelper.cs" />
     <Compile Include="Log\LogHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
